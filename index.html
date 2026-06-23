@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub - WornGPT Workspace</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Tùy chỉnh thanh cuộn kiểu GitHub */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #0d1117; }
+        ::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8b949e; }
+    </style>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] font-sans antialiased h-screen flex flex-col">
+
+    <header class="bg-[#161b22] border-b border-[#30363d] px-4 py-3 flex items-center justify-between text-sm">
+        <div class="flex items-center space-x-4 flex-1">
+            <i class="fab fa-github text-2xl text-white hover:text-gray-400 cursor-pointer"></i>
+            <div class="relative w-64 hidden md:block">
+                <input type="text" placeholder="Type / to search or jump to..." class="w-full bg-[#0d1117] border border-[#30363d] rounded-md px-3 py-1 text-xs text-[#c9d1d9] focus:outline-none focus:border-[#1f6feb]">
+                <span class="absolute right-2 top-1.5 border border-[#30363d] text-[10px] px-1.5 py-0.2 rounded text-[#8b949e]">/</span>
+            </div>
+            <nav class="hidden lg:flex space-x-4 font-semibold text-white">
+                <a href="#" class="hover:text-gray-300">Pull requests</a>
+                <a href="#" class="hover:text-gray-300">Issues</a>
+                <a href="#" class="hover:text-gray-300">Codespaces</a>
+                <a href="#" class="hover:text-gray-300">Marketplace</a>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-3">
+            <button class="bg-[#238636] hover:bg-[#2ea043] text-white px-3 py-1 rounded-md text-xs font-medium flex items-center space-x-1">
+                <i class="fas fa-plus"></i> <span>New</span>
+            </button>
+            <div class="w-7 h-7 rounded-full bg-[#1f6feb] flex items-center justify-center text-xs font-bold text-white cursor-pointer">
+                W
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        
+        <aside class="w-64 bg-[#0d1117] border-r border-[#30363d] p-4 hidden md:flex flex-col space-y-4">
+            <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-[#8b949e]">Top Repositories</span>
+                <button class="text-xs text-[#58a6ff] hover:underline">View all</button>
+            </div>
+            <div class="space-y-2 flex-1 overflow-y-auto">
+                <div class="flex items-center space-x-2 p-1.5 rounded hover:bg-[#21262d] cursor-pointer text-sm">
+                    <i class="fas fa-book text-[#8b949e] text-xs"></i>
+                    <span class="truncate font-semibold text-white">worngpt-core</span>
+                </div>
+                <div class="flex items-center space-x-2 p-1.5 rounded hover:bg-[#21262d] cursor-pointer text-sm">
+                    <i class="fas fa-book text-[#8b949e] text-xs"></i>
+                    <span class="truncate">nextjs-portfolio</span>
+                </div>
+                <div class="flex items-center space-x-2 p-1.5 rounded hover:bg-[#21262d] cursor-pointer text-sm">
+                    <i class="fas fa-book text-[#8b949e] text-xs"></i>
+                    <span class="truncate">awesome-ai-agents</span>
+                </div>
+            </div>
+            <div class="border-t border-[#30363d] pt-4 text-xs text-[#8b949e]">
+                <p class="font-semibold text-white mb-1">WornGPT Status</p>
+                <p class="flex items-center"><span class="w-2 h-2 rounded-full bg-[#238636] inline-block mr-1.5"></span> Operational</p>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col bg-[#0d1117]">
+            <div class="bg-[#161b22] border-b border-[#30363d] px-4 flex space-x-4 text-sm">
+                <button class="border-b-2 border-[#f78166] py-3 text-white font-semibold flex items-center space-x-2">
+                    <i class="fas fa-code text-[#8b949e]"></i>
+                    <span>WornGPT Terminal</span>
+                </button>
+                <button class="py-3 text-[#8b949e] hover:text-[#c9d1d9] flex items-center space-x-2">
+                    <i class="fas fa-history"></i>
+                    <span>Logs</span>
+                </button>
+            </div>
+
+            <div id="chat-container" class="flex-1 overflow-y-auto p-6 space-y-6">
+                <div class="flex items-start space-x-4 border-b border-[#21262d] pb-4">
+                    <div class="w-8 h-8 rounded-md bg-[#238636] flex
