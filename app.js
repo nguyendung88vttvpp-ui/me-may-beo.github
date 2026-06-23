@@ -1,5 +1,5 @@
 // Cấu hình API (Thay API Key của bạn vào đây)
-const API_KEY = "THAY_API_KEY_GEMINI_CUA_BAN_VAO_DAY"; 
+const API_KEY = "AQ.Ab8RN6I4Ku7kv-YZv3maW0jKCKdsoNYBhKlM6E7EGuzPgn48Sw"; 
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
 
 const chatContainer = document.getElementById('chat-container');
